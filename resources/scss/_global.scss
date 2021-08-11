@@ -1,0 +1,506 @@
+// Global component styles
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: $yellow;
+  &:focus,
+  &:hover {
+    outline: none;
+    color: $yellow;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #192a3e;
+  font-weight: 500;
+}
+
+p {
+  color: $text-color;
+  &.small {
+    color: #818e9b;
+  }
+}
+
+strong {
+  font-weight: 500;
+  color: $black;
+}
+
+.bg-color {
+  background-color: $bg-color;
+}
+
+.bg-primary {
+  background-color: $yellow !important;
+}
+
+// Main page wrapper
+#wrapper {
+  display: flex;
+  #content-wrapper {
+    background-color: $gray-100;
+    width: 100%;
+    overflow-x: hidden;
+    #content {
+      flex: 1 0 auto;
+    }
+  }
+}
+
+// Set container padding to match gutter width instead of default 15px
+.container,
+.container-fluid {
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
+}
+
+.content-full-height {
+  height: calc(100% - 94px);
+}
+
+// Scroll to top button
+.scroll-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  text-align: center;
+  color: $white;
+  background: fade-out($gray-800, 0.5);
+  line-height: 46px;
+  &:focus,
+  &:hover {
+    color: white;
+  }
+  &:hover {
+    background: $gray-800;
+  }
+  i {
+    font-weight: 800;
+  }
+}
+
+//alert
+.alert {
+  color: $white;
+  font-weight: 500;
+  i {
+    margin-right: 10px;
+  }
+  .close {
+    color: $white;
+    font-weight: 300;
+  }
+}
+
+.alert-danger {
+  background: $red;
+}
+
+.alert-success {
+  background: $green;
+}
+
+/* chat-box */
+
+#chat-box {
+  height: calc(100vh - 100px);
+}
+
+.chat-left {
+  padding: 20px;
+  box-shadow: 0px 1px 15px rgb(0 0 0 / 10%);
+  img {
+    opacity: 0.3;
+  }
+  .active img {
+    opacity: 1;
+  }
+}
+
+.chat-name {
+  font-weight: 500;
+  color: $header-color;
+}
+
+.online {
+  width: 8px;
+  height: 8px;
+  background: $green;
+  display: inline-block;
+  border-radius: 50px;
+  vertical-align: middle;
+  margin: 6px 6px 0px 6px;
+}
+
+.offline {
+  width: 8px;
+  height: 8px;
+  background: $gray-300;
+  display: inline-block;
+  border-radius: 50px;
+  vertical-align: middle;
+  margin: 6px 6px 0px 6px;
+}
+
+/* dash-link */
+
+.dash-link {
+  margin: 20px 0;
+  i {
+    background: #ebeff2;
+    color: #c2cfe0;
+    padding: 20px 15px;
+    font-size: 36px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    min-width: 96px;
+  }
+  span {
+    color: #707683;
+  }
+  &:hover {
+    text-decoration: none;
+    i,
+    span {
+      color: $yellow;
+      text-decoration: none;
+    }
+  }
+}
+
+/* modal-success */
+#modal-success {
+  i {
+    font-size: 36px;
+    color: $yellow;
+  }
+}
+
+/* inner-menu  */
+
+.inner-menu {
+  background: #fff;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  a {
+    display: flex;
+    border-bottom: 1px solid $border-color;
+    padding: 20px 10px;
+    i {
+      margin-right: 10px;
+      font-size: 18px;
+      color: $gray;
+      width: 25px;
+      text-align: center;
+    }
+    h6 {
+      font-size: 13px;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 10px;
+      color: $text-light-color;
+      margin: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      border-right: 2px solid $yellow;
+      i,
+      h6 {
+        color: $yellow;
+      }
+    }
+    &.active {
+      i,
+      h6 {
+        color: $yellow;
+      }
+    }
+  }
+}
+
+.shadow {
+  box-shadow: 0px 6px 18px rgb(0 0 0 / 6%) !important;
+}
+
+/* profile-logo */
+
+.profile-logo {
+  position: relative;
+  width: 120px;
+  margin: 0 auto;
+  img {
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+  }
+  input {
+    color: red;
+  }
+  .fileUpload {
+    background: #fff;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    color: #222;
+    font-size: 1em;
+    font-weight: bold;
+    //  margin: 1.25em auto; /*20px/16px 0*/
+    overflow: hidden;
+
+    position: relative;
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    line-height: 24px;
+    bottom: 41px;
+    left: 89px;
+  }
+  .fileUpload:hover,
+  .fileUpload:active,
+  .fileUpload:focus {
+    background: #fff;
+    cursor: pointer;
+  }
+  .fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 148px;
+    height: 46px;
+    cursor: pointer;
+  }
+
+  input[type="file"] {
+    position: fixed;
+    right: 100%;
+    bottom: 100%;
+  }
+  .custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+}
+
+/* profile-links */
+
+.profile-links {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style-type: none;
+    &:first-child {
+      border-top: 1px solid $border-color;
+    }
+    &.active {
+      border-right: 2px solid $yellow;
+      text-decoration: none;
+    }
+    a {
+      color: $header-color;
+      font-weight: 500;
+      font-size: 12px;
+      padding: 10px 0 10px 20px;
+      display: block;
+      border-bottom: 1px solid $border-color;
+      &:hover {
+        border-right: 2px solid $yellow;
+        text-decoration: none;
+      }
+      i {
+        color: $gray;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+/* list-colors */
+
+.list-colors {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+    display: inline-block;
+    .color {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      background: red;
+      border-radius: 50px;
+      vertical-align: text-bottom;
+      margin: 0 3px 0 10px;
+      box-shadow: 1px 1px 1px rgb(0 0 0 / 20%);
+    }
+  }
+}
+
+/* list-group */
+
+.list-group {
+  border-radius: 0;
+  .list-group-item {
+    font-weight: 400;
+    border-color: $border-color;
+    color: $header-color;
+    i {
+      margin-right: 10px;
+      color: $gray;
+      margin-top: 3px;
+    }
+    &.active,
+    &:hover {
+      background: #fff;
+      color: $yellow;
+      border-color: $border-color;
+      border-right: 2px solid $yellow;
+    }
+  }
+}
+
+/* dropzone */
+
+.dropzone {
+  padding: 100px 0;
+  border: 1px dashed #d5d5d5;
+}
+
+.dz-button {
+  h6 {
+    color: #90a0b7;
+    font-weight: 600;
+  }
+  p {
+    color: #90a0b7;
+    font-size: 11px;
+  }
+  span {
+    color: $yellow;
+  }
+}
+
+/* curated-card */
+
+.curated-card {
+  cursor: pointer;
+  position: relative;
+  &.card-selected {
+    border: 2px solid $yellow !important;
+  }
+  .card-check {
+    width: 20px;
+    height: 20px;
+    background: $yellow;
+    border-radius: 50px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+.card-count {
+  width: 20px;
+  height: 20px;
+  background: $yellow;
+  border-radius: 50px;
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+}
+
+.card-banner {
+  background: #fff9ea;
+  p {
+    color: $yellow;
+  }
+}
+
+.card-overflow {
+  height: 900px;
+  overflow: hidden;
+  overflow-y: scroll;
+  .card-header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: none !important;
+    h6 {
+      float: left;
+    }
+    .card-count {
+      float: right;
+    }
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 100px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #c4c4c4;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #c4c4c4;
+}
+
+/* social-card */
+.social-card {
+  &:hover {
+    background: $yellow;
+    color: #fff;
+    .card-title,
+    .card-text {
+      color: #fff;
+    }
+  }
+}
